@@ -1,0 +1,114 @@
+import { useState } from "react";
+
+interface HeaderProps {
+  title?: string;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
+  const isActive = (tab: string) => activeTab === tab;
+  const [open, setOpen ] = useState<boolean>(false)
+  return (
+    <header className="flex items-center justify-between bg-[#FDFDFD] p-4 w-full shadow-2xs backdrop-blur-3xl">
+
+      {/* mobile nav bar */}
+      <div className="md:hidden block z-50">
+        <img 
+            src="/menubar.png"
+            className="h-4 cursor-pointer"
+            onClick={() => setOpen(!open)}
+        />
+
+        {open && (
+          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed h-screen left-0 top-0">
+            <div
+            onClick={() => {
+              setActiveTab("dashboard");
+              setOpen(!open);
+            }}
+            className={`flex items-center gap-3 px-2 py-2 rounded-md transition-colors cursor-pointer ${
+              isActive("dashboard")
+              ? "bg-white text-[#340260] font-semibold"
+              : "text-[#C2C2C2] hover:bg-gray-100 hover:text-gray-900"
+            }`}
+            >
+            <span className="text-sm">Dashboard</span>
+            </div>
+
+          <div
+            onClick={() => {setActiveTab("expenses"); setOpen(!open);}}
+            className={`flex items-center gap-3 px-2 py-2 rounded-md transition-colors cursor-pointer ${
+              isActive("expenses")
+                ? "bg-white text-[#340260] font-semibold"
+                : "text-[#C2C2C2] hover:bg-gray-100 hover:text-gray-900"
+            }`}
+          >
+            <span className="text-sm">Expenses</span>
+          </div>
+
+          <div
+            onClick={() => {setActiveTab("transactions"); setOpen(!open);}}
+            className={`flex items-center gap-3 px-2 py-2 rounded-md transition-colors cursor-pointer ${
+              isActive("transactions")
+                ? "bg-white text-[#340260] font-semibold"
+                : "text-[#C2C2C2] hover:bg-gray-100 hover:text-gray-900"
+            }`}
+          >
+            <span className="text-sm">Transactions</span>
+          </div>  
+
+          <div
+            onClick={() => {setActiveTab("inventory"); setOpen(!open);}}
+            className={`flex items-center gap-3 px-2 py-2 rounded-md transition-colors cursor-pointer ${
+              isActive("inventory")
+                ? "bg-white text-[#340260] font-semibold"
+                : "text-[#C2C2C2] hover:bg-gray-100 hover:text-gray-900"
+            }`}
+          >
+            <span className="text-sm">Inventory</span>
+          </div>
+          </nav>
+        )}
+      </div>
+
+    <div>
+        <h1 className="font-poppins font-bold text-xl text-black-500 ml-10">
+            {title}
+        </h1>
+    </div>
+
+    {/* Right side */}
+    <div className="flex items-center space-x-4">
+        <div className="relative w-[350px]">
+            {/* <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" /> */}
+            <input
+                type="text"
+                placeholder="Search for anything here"
+                className="w-full pl-10 p-1 rounded-3xl border border-gray-300 focus:outline-none text-base"
+            />
+        </div>
+        {/* <Image
+            src="/bell-icon.png"
+            alt="Bell Icon"
+            width={60}
+            height={60}
+            className="h-15 w-15 rounded-full p-2"
+        /> */}
+
+        <div className="flex items-center space-x-2">
+            {/* <Image
+                src="/Ellipse 7.png"
+                alt="Ellipse Icon"
+                width={60}
+                height={60}
+                className="h-15 w-15 rounded-full p-2"
+            /> */}
+            <span className="text-gray-700 text-sm">Debo Frootify</span>
+        </div>
+    </div>
+</header>
+  )
+}
+
+export default Header
