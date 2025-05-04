@@ -1,6 +1,4 @@
-// import Image from "next/image";
 import { Line, Doughnut, 
-  // Bar
  } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -11,13 +9,11 @@ import {
   Tooltip,
   ArcElement,
   BarElement,
-  // TooltipItem,
   ChartData,
   ChartOptions,
 } from "chart.js";
-import annotationPlugin from "chartjs-plugin-annotation"; // Import the annotation plugin
+import annotationPlugin from "chartjs-plugin-annotation"; 
 
-// Register the necessary Chart.js components and the annotation plugin
 ChartJS.register(
   LineElement,
   PointElement,
@@ -30,7 +26,6 @@ ChartJS.register(
 );
 
  const Chart = () => {
-  // Data for Total Sales Line Chart
   const salesData: ChartData<"line"> = {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     datasets: [
@@ -121,7 +116,6 @@ ChartJS.register(
     },
   };
 
-  // Data for Orders Summary Doughnut Chart
   const ordersData: ChartData<"doughnut"> = {
     labels: ["Delivered", "Pending", "Overdue"],
     datasets: [
@@ -146,93 +140,6 @@ ChartJS.register(
       },
     },
   };
-
-  
-  // Data for Teams Shifts Bar Chart
-  // const shiftsData: ChartData<"bar"> = {
-  //   labels: ["Week 1 (20-4)", "Week 2 (5-11)", "Week 3 (12-18)", "Week 4 (19-25)", "Week 5 (19-25)"],
-  //   datasets: [
-  //     {
-  //       label: "Shifts (Progress)", 
-  //       data: [45000, 50000, 20000, 50000 ,55000],
-  //       backgroundColor: "#6ABC35", 
-  //       borderRadius: { bottomRight: 20, bottomLeft: 20,},
-  //       borderSkipped: false,
-  //       barThickness: 35,
-  //       barPercentage: 0.5,
-  //       categoryPercentage: 1.0,
-  //       order: 1,
-  //     },
-  //     {
-  //       label: "Shifts (Base)",
-  //       data: [60000, 60000, 60000,60000,60000],
-  //       backgroundColor: "#E0F1D5 ",
-  //       borderWidth: 0,
-  //       borderSkipped: false,
-  //       borderRadius: { topRight: 20, topLeft: 20, },
-  //       barThickness: 35,
-  //       barPercentage: 0.5,
-  //       categoryPercentage: 1.0,
-  //       order: 2,
-  //     },
-      
-      
-  //   ],
-  // };
-  // const shiftsOptions: ChartOptions<"bar"> = {
-  //   responsive: true,
-  //   maintainAspectRatio: false,
-  //   plugins: {
-  //     legend: {
-  //       display: true,
-  //       labels: {
-  //         font: { weight: "bold", size: 8},
-  //         color: "#374151",
-  //       },
-  //     },
-  //     tooltip: {
-  //       enabled: true,
-  //       backgroundColor: "#FFF",
-  //       titleColor: "#000",
-  //       titleFont: { weight: "bold" },
-  //       bodyColor: "#000",
-  //       bodyFont: { weight: "bold" },
-  //       borderColor: "#E5E7EB",
-  //       borderWidth: 1,
-  //       padding: 8,
-  //       displayColors: true,
-  //       callbacks: {
-  //         label: (context: TooltipItem<"bar">) => {
-  //           return `N${context.parsed.y.toLocaleString()}`;
-  //         },
-  //       },
-  //     },
-  //   },
-  //   scales: {
-  //     x: {
-  //       stacked: true,
-  //       grid: { display: false },
-  //       ticks: {
-  //         color: "#374151",
-  //         font: { size: 8, weight: "bold" },
-  //         maxRotation: 0,
-  //         minRotation: 0,
-          
-  //       },
-  //     },
-  //     y: {
-  //       stacked: true,
-  //       beginAtZero: true,
-  //       grid: { display: false }, 
-  //       ticks: {
-  //         color: "#374151",
-  //         font: { weight: "bold", size: 12 },
-  //         callback: (value: string | number) => `${(Number(value) / 1000)}K`,
-  //       },
-  //     },
-  //   },
-  // };
-
 
 
   return (
@@ -326,133 +233,7 @@ ChartJS.register(
                     </div>
                   </div>
                 </div>
-
-              {/* Inventory Alerts */}
-              {/* <div className="bg-white p-4 rounded-lg shadow-sm">
-                <div className="flex-row justify-between items-center" >
-                  <h2 className="text-lg font-semibold text-gray-800">Inventory Alerts (7 items) </h2>
-                  <img
-                    src="/arrow-icon.png"
-                    alt="Arrow Icon"
-                    width={5}
-                    height={5}
-                    className="w-5 h-5"
-                  />
-                </div>
-                <div className="mt-4 space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Mango (60)</span>
-                    <span className="text-sm text-yellow-500">Warning</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "60%" }}></div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Cups (10)</span>
-                    <span className="text-sm text-yellow-500">Warning</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "50%" }}></div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Straws (5)</span>
-                    <span className="text-sm text-green-500">Normal</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div className="bg-green-500 h-2 rounded-full" style={{ width: "80%" }}></div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
-             {/* <div className="flex flex-1 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-800">March 2025</h2>
-                <div className="mt-4 w-[400px] h-[220px]">
-                  <Bar data={shiftsData} options={shiftsOptions} /> 
-                </div>
-              </div>
-               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h2 className="text-lg font-semibold text-gray-800">Team and Shifts</h2>
-                <div className="mt-4 space-y-3">
-                  <div>
-                    <p className="text-sm text-gray-600">Morning 7:30 AM - 3:00 PM</p>
-                    <div className="mt-2 space-y-1">
-                      <div className="flex items-center">
-                        <span className="w-4 h-4 mr-2 flex items-center justify-center bg-green-500 rounded-full text-white text-xs">✓</span>
-                        <span className="text-sm text-gray-600">Sarah (On Shift)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600">Next Shift 3:00 PM - 9:00 PM</p>
-                    <div className="mt-2 space-y-1">
-                      <div className="flex items-center">
-                        <span className="w-4 h-4 mr-2 flex items-center justify-center bg-gray-400 rounded-full text-white text-xs">🕒</span>
-                        <span className="text-sm text-gray-600">Michael (Not Yet Clocked In)</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="w-4 h-4 mr-2 flex items-center justify-center bg-yellow-400 rounded-full text-white text-xs">⚠</span>
-                        <span className="text-sm text-gray-600">Clara (Pending Start)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-        {/* <div className="flex flex-col gap-6 w-full md:w-[300px]">
-          <div className="bg-white py-2 px-2 rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold text-gray-800">Top Products</h2>
-            <div className="mt-4 space-y-3">
-              <div className="flex items-start">
-                <span className="w-8 h-8 bg-gray-200 rounded mr-2"></span>
-                <div className="flex flex-col flex-1">
-                  <span className="text-sm text-gray-600">Crunchy Carrots</span>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs text-green-500">N30,000</span>
-                    <span className="text-sm text-green-500">10 sold</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <span className="w-8 h-8 bg-gray-200 rounded mr-2"></span>
-                <div className="flex flex-col flex-1">
-                  <span className="text-sm text-gray-600">Crunchy Pear</span>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-green-500">N15,000</span>
-                    <span className="text-sm text-green-500">5 sold</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <span className="w-8 h-8 bg-gray-200 rounded mr-2"></span>
-                <div className="flex flex-col flex-1">
-                  <span className="text-sm text-gray-600">Crunchy Apple</span>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-green-500">N10,000</span>
-                    <span className="text-sm text-green-500">3 sold</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <span className="w-8 h-8 bg-gray-200 rounded mr-2"></span>
-                <div className="flex flex-col flex-1">
-                  <span className="text-sm text-gray-600">Crunchy Banana</span>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-green-500">N5,000</span>
-                    <span className="text-sm  text-green-500">2 sold</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <button
-              className="text-sm mt-10 w-full py-2 bg-[#FFE1E2] text-[#FF6700] rounded-full hover:bg-[#FFD1D2] transition-colors"
-            >
-              See all
-            </button>
-          </div> */}
 
           <div className="bg-white rounded-lg shadow-sm px-6">
             <h2 className="text-lg font-semibold text-gray-800">Recent Activities</h2>
