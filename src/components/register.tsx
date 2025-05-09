@@ -1,14 +1,16 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [password, setPassword ] = useState({
-    first_name: "",
-    last_name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: ""
-  })
+  });
+  const navigate = useNavigate()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -20,38 +22,47 @@ const Register = () => {
     e.preventDefault();
     console.log(password)
 
+
     try {
-      const response = await axios.post("http://localhost:5000/auth/signup", password, {
+      const response = await axios.post( import.meta.env.VITE_API_URL + "auth/signup", password, {
+
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
       });
-      console.log("success:" + response.data.message);
+      if (response.data) {
+        navigate("/dashboard")
+        console.log("success:" + response.data.message);
+        toast(response.data.message)
+      } else {
+        toast.error(response.data.message || "Login failed")
+      }
     } catch (error) {
       console.log("Error submitting sheet: " + error);
+      // toast.error("Error submitting sheet: " + error);
     }
   }
 
   return (
     <div className="min-h-screen flex">
-      <form className="flex flex-col items-center gap-4 bg-white w-[70%] md:w-[50%] m-auto py-30 px-19 rounded-lg" onSubmit={handleSubmit}>
-        <h2 className="font-bold text-4xl">Danny</h2>
-        <h4 className="font-bold text-2xl">Register</h4>
+      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-10 m-auto rounded-lg" onSubmit={handleSubmit}>
+        <h2 className="font-bold text-2xl">Danny</h2>
+        <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center">Register</h4>
         <input 
           type="text"
           placeholder="First Name"
-          value={password.first_name}
+          value={password.firstName}
           onChange={handleChange}
-          id="first_name"
+          id="firstName"
           className="border border-gray-300 py-2 rounded-md outline-none px-10"
         />
         <input 
           type="text"
           placeholder="Last Name"
-          value={password.last_name}
+          value={password.lastName}
           onChange={handleChange}
-          id="last_name"
+          id="lastName"
           className="border border-gray-300 py-2 rounded-md outline-none px-10"
         />
         <input 
@@ -70,10 +81,18 @@ const Register = () => {
           id="password"
           className="border border-gray-300 py-2 rounded-md outline-none px-10"
         />
-        <Link to="/auth/ForgotPassword">
-          <button className="flex justify-end text-purple-500 cursor-pointer text-sm">Forgot Password?</button>
+
+        {/* <p className="text-gray-500 text-sm">By signing up, you agree to our <span className="text-purple-500 cursor-pointer">Terms of Service</span> and <span className="text-purple-500 cursor-pointer">Privacy Policy</span></p> */}
+
+
+        <Link to="/auth/ForgotPassword" className="underline flex flex-1 justify-end text-purple-500 text-sm">
+          Forgot Password?
         </Link>
-        <button className="bg-purple-500 px-10 py-2 rounded-full cursor-pointer text-white">Sign Up</button>
+        
+
+        <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-md cursor-pointer text-white">Sign Up</button>
+
+        <p className="text-sm flex gap-2">Already have an account? <Link to="/auth/signin" className="underline flex flex-1 justify-end text-purple-500 text-sm cursor-pointer">Login</Link></p>
       </form>
     </div>
   )

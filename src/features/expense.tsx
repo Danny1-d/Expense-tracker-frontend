@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 
 const Expense = () => {
   const [budget, setBudget] = useState<Number>();
@@ -9,11 +9,6 @@ const Expense = () => {
   });
 
     const handleBudget = (e: React.ChangeEvent<HTMLInputElement>) => {
-      // e.preventDefault()
-      // const value  = Number(e.target.value);
-      // if (isNaN(value)) {
-      //   setBudget( value );
-      // }
       const value  = Number(e.target.value);
       setBudget( value );
       console.log("Budget:", budget);
@@ -24,7 +19,7 @@ const Expense = () => {
       console.log(budget)
   
       // try {
-      //   const response = await axios.post("http://localhost:5000/auth/ForgotPassword", budget, {
+      //   const response = await axios.post("http://localhost:5000/budget", budget, {
       //     headers: {
       //       Accept: "application/json",
       //       "Content-Type": "application/json",
