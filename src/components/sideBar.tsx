@@ -14,7 +14,7 @@ const SideBar = ({ activeTab, setActiveTab }: SidebarProps) => {
 
         {/* Navigation Links */}
         <nav className="flex flex-col gap-3 md:block hidden w-[20rem] h-screen p-2 bg-[#340260]">
-        <div className="mb-0 mt-4 px-6">
+        <div className="mb-0 mt-4 px-6 text-white font-bold text-xl">
           Danny
         </div>
 
