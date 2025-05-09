@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 
 const HomePage = () => {
   return (
-    <div className="bg-[#F5F5F5] h-screen w-screen flex flex-col justify-between">
+    <div className="bg-wheat-800 h-screen w-screen flex flex-col justify-between">
       <div className='flex justify-between p-6'>
         <h2 className='font-bold text-xl'>DANNY</h2>
         <Link to='/signin'>
-          <h4 className='border rounded-full px-5 py-2'>Login</h4>
+          <h4 className='border border-gray-300 rounded-full px-5 py-2'>Login</h4>
         </Link>
       </div>
 
