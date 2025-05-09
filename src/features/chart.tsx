@@ -143,7 +143,7 @@ ChartJS.register(
 
 
   return (
-    <div className=" bg-gray-100">
+    <div className="">
         <h2 className="bg-[#340260] text-[#C2C2C2] p-2 font-bold text-xl rounded-md">Welcome Onboard, Daniel</h2>
 
           <div className="grid md:grid-cols-2 gap-3 mt-3">

@@ -28,7 +28,7 @@ export const Forgot = () => {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
     <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
       <h2 className="font-bold text-4xl">Danny</h2>
       <h4 className="text-lg text-[#7E7E7E] mx-auto text-center">Forgotpassword</h4>

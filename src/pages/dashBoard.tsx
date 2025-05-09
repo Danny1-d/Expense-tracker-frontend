@@ -44,7 +44,7 @@ const DashBoard = () => {
       <SideBar activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="w-full">
         <Header title={getHeaderTitle() || "Header"} activeTab={activeTab} setActiveTab={setActiveTab} />
-        <main className="flex-1 p-3 bg-gray-100 ">
+        <main className="flex-1 p-3 bg-gray-100">
           {renderContent()}
         </main>
       </div>
