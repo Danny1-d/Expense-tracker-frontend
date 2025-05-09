@@ -42,6 +42,8 @@ const Register = () => {
       console.log("Error submitting sheet: " + error);
       // toast.error("Error submitting sheet: " + error);
     }
+    console.log(import.meta.env.VITE_API_URL + "auth/signup");
+    
   }
 
   return (
