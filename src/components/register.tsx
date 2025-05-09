@@ -48,7 +48,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
-      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-5 m-auto rounded-lg" onSubmit={handleSubmit}>
+      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-3 m-auto rounded-lg" onSubmit={handleSubmit}>
         <h2 className="font-bold text-3xl">Danny</h2>
         <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">REGISTER</h4>
         <input 
