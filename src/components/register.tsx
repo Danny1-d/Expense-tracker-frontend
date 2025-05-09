@@ -48,16 +48,16 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
-      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
-        <h2 className="font-bold text-2xl">Danny</h2>
-        <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center">Register</h4>
+      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 sm:p-10 p-5 m-auto rounded-lg" onSubmit={handleSubmit}>
+        <h2 className="font-bold text-3xl">Danny</h2>
+        <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">REGISTER</h4>
         <input 
           type="text"
           placeholder="First Name"
           value={password.firstName}
           onChange={handleChange}
           id="firstName"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="text"
@@ -65,7 +65,7 @@ const Register = () => {
           value={password.lastName}
           onChange={handleChange}
           id="lastName"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="text"
@@ -73,7 +73,7 @@ const Register = () => {
           value={password.email}
           onChange={handleChange}
           id="email"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="password"
@@ -81,7 +81,7 @@ const Register = () => {
           value={password.password}
           onChange={handleChange}
           id="password"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
         />
 
         {/* <p className="text-gray-500 text-sm">By signing up, you agree to our <span className="text-purple-500 cursor-pointer">Terms of Service</span> and <span className="text-purple-500 cursor-pointer">Privacy Policy</span></p> */}

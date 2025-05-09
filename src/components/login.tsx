@@ -43,16 +43,16 @@ export const Login = () => {
 
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
-    <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
-      <h2 className="font-bold text-2xl">Danny</h2>
-      <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center">Login</h4>
+    <form className="flex flex-col items-center gap-3 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
+      <h2 className="font-bold text-3xl">Danny</h2>
+      <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">LOGIN</h4>
       <input 
         type="text"
         id="email"
         onChange={handleChange}
         placeholder="Email"
         value={password.email}
-        className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+        className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
       />
       <input 
         type="password"
@@ -60,7 +60,7 @@ export const Login = () => {
         onChange={handleChange}
         placeholder="Password"
         value={password.password}
-        className="border border-gray-300 py-1 rounded-lg outline-none px-5"
+        className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
       />
       <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
     </form>
