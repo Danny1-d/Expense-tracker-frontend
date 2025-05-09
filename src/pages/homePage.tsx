@@ -18,7 +18,7 @@ const HomePage = () => {
         <h4 className='text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center'>Get started by creating an account</h4>
         <div className='flex justify-center mt-10'>
         <Link to='/signup'>
-          <button className='bg-purple-600 px-10 md:px-10 py-2 rounded-full cursor-pointer border border-gray-300'>Get Started</button>
+          <button className='bg-purple-500 text-gray-300 px-10 md:px-10 py-2 rounded-full cursor-pointer'>Get Started</button>
         </Link>
       </div>
     </div>

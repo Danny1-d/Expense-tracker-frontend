@@ -48,7 +48,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex">
-      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-10 m-auto rounded-lg" onSubmit={handleSubmit}>
+      <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
         <h2 className="font-bold text-2xl">Danny</h2>
         <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center">Register</h4>
         <input 
@@ -57,7 +57,7 @@ const Register = () => {
           value={password.firstName}
           onChange={handleChange}
           id="firstName"
-          className="border border-gray-300 py-2 rounded-md outline-none px-10"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
         />
         <input 
           type="text"
@@ -65,7 +65,7 @@ const Register = () => {
           value={password.lastName}
           onChange={handleChange}
           id="lastName"
-          className="border border-gray-300 py-2 rounded-md outline-none px-10"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
         />
         <input 
           type="text"
@@ -73,7 +73,7 @@ const Register = () => {
           value={password.email}
           onChange={handleChange}
           id="email"
-          className="border border-gray-300 py-2 rounded-md outline-none px-10"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
         />
         <input 
           type="password"
@@ -81,20 +81,20 @@ const Register = () => {
           value={password.password}
           onChange={handleChange}
           id="password"
-          className="border border-gray-300 py-2 rounded-md outline-none px-10"
+          className="border border-gray-300 py-1 rounded-lg outline-none px-5"
         />
 
         {/* <p className="text-gray-500 text-sm">By signing up, you agree to our <span className="text-purple-500 cursor-pointer">Terms of Service</span> and <span className="text-purple-500 cursor-pointer">Privacy Policy</span></p> */}
 
 
-        <Link to="/auth/ForgotPassword" className="underline flex flex-1 justify-end text-purple-500 text-sm">
+        <Link to="/ForgotPassword" className="underline flex flex-1 justify-end text-purple-500 text-sm">
           Forgot Password?
         </Link>
         
 
-        <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-md cursor-pointer text-white">Sign Up</button>
+        <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-xl cursor-pointer text-white">Sign Up</button>
 
-        <p className="text-sm flex gap-2">Already have an account? <Link to="/auth/signin" className="underline flex flex-1 justify-end text-purple-500 text-sm cursor-pointer">Login</Link></p>
+        <p className="text-sm text-gray-500 flex gap-2">Already have an account? <Link to="/signin" className="underline flex flex-1 justify-end text-purple-500 text-sm cursor-pointer">Login</Link></p>
       </form>
     </div>
   )

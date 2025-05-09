@@ -29,16 +29,16 @@ export const Forgot = () => {
 
   return (
     <div className="min-h-screen flex">
-    <form className="flex flex-col items-center gap-4 bg-white w-[70%] md:w-[50%] m-auto py-30 px-19 rounded-lg" onSubmit={handleSubmit}>
+    <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
       <h2 className="font-bold text-4xl">Danny</h2>
-      <h4 className="font-bold text-2xl">Forgotpassword</h4>
+      <h4 className="text-lg text-[#7E7E7E] mx-auto text-center">Forgotpassword</h4>
       <input 
         type="text"
         id="email"
         onChange={handleChange}
         placeholder="Email"
         value={password}
-        className="border border-gray-300 py-2 rounded-md outline-none px-10"
+        className="border border-gray-300 py-1 rounded-md outline-none px-10"
       />
       <button className="bg-purple-500 px-10 py-2 rounded-full cursor-pointer text-white">Sign Up</button>
     </form>

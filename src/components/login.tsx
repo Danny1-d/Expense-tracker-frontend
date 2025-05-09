@@ -43,7 +43,7 @@ export const Login = () => {
 
   return (
     <div className="min-h-screen flex">
-    <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-10 m-auto rounded-lg" onSubmit={handleSubmit}>
+    <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-12 m-auto rounded-lg" onSubmit={handleSubmit}>
       <h2 className="font-bold text-2xl">Danny</h2>
       <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center">Login</h4>
       <input 
@@ -52,7 +52,7 @@ export const Login = () => {
         onChange={handleChange}
         placeholder="Email"
         value={password.email}
-        className="border border-gray-300 py-2 rounded-md outline-none px-10"
+        className="border border-gray-300 py-1 rounded-lg outline-none px-5"
       />
       <input 
         type="password"
@@ -60,9 +60,9 @@ export const Login = () => {
         onChange={handleChange}
         placeholder="Password"
         value={password.password}
-        className="border border-gray-300 py-2 rounded-md outline-none px-10"
+        className="border border-gray-300 py-1 rounded-lg outline-none px-5"
       />
-      <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-md cursor-pointer text-white">Login</button>
+      <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
     </form>
   </div>
   )
