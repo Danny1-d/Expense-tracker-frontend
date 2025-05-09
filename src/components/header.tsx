@@ -42,12 +42,12 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
       <div className="md:hidden block z-50">
         <img 
             src="/menubar.png"
-            className="h-4 cursor-pointer"
+            className="h-10 w-10 cursor-pointer"
             onClick={() => setOpen(!open)}
         />
 
         {open && (
-          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed h-screen left-0 top-0">
+          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed left-0 top-0">
             <div
             onClick={() => {
               setActiveTab("dashboard");
