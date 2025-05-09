@@ -38,7 +38,7 @@ export const Forgot = () => {
         onChange={handleChange}
         placeholder="Email"
         value={password}
-        className="border border-gray-300 py-1 rounded-md outline-none px-10 placeholder:text-sm placeholder:text-gray-300"
+        className="border border-gray-300 py-1 rounded-md outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
       />
       <button className="bg-purple-500 px-10 py-2 rounded-full cursor-pointer text-white">Sign Up</button>
     </form>

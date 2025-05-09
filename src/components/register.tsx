@@ -57,7 +57,7 @@ const Register = () => {
           value={password.firstName}
           onChange={handleChange}
           id="firstName"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+          className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="text"
@@ -65,7 +65,7 @@ const Register = () => {
           value={password.lastName}
           onChange={handleChange}
           id="lastName"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+          className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="text"
@@ -73,7 +73,7 @@ const Register = () => {
           value={password.email}
           onChange={handleChange}
           id="email"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+          className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
         />
         <input 
           type="password"
@@ -81,7 +81,7 @@ const Register = () => {
           value={password.password}
           onChange={handleChange}
           id="password"
-          className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+          className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
         />
 
         {/* <p className="text-gray-500 text-sm">By signing up, you agree to our <span className="text-purple-500 cursor-pointer">Terms of Service</span> and <span className="text-purple-500 cursor-pointer">Privacy Policy</span></p> */}

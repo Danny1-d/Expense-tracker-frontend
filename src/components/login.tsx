@@ -52,7 +52,7 @@ export const Login = () => {
         onChange={handleChange}
         placeholder="Email"
         value={password.email}
-        className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+        className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
       />
       <input 
         type="password"
@@ -60,7 +60,7 @@ export const Login = () => {
         onChange={handleChange}
         placeholder="Password"
         value={password.password}
-        className="border border-gray-300 py-1 rounded-lg outline-none px-5 placeholder:text-sm placeholder:text-gray-300"
+        className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
       />
       <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
     </form>
