@@ -44,8 +44,8 @@ export const Login = () => {
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
     <form className="flex flex-col items-center gap-3 bg-white md:px-30 md:py-20 p-3 m-auto rounded-lg" onSubmit={handleSubmit}>
-      <h2 className="font-bold text-3xl">Danny</h2>
-      <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">LOGIN</h4>
+      <h2 className="font-bold md:text-3xl text-xl">Danny</h2>
+      <h4 className="md:text-lg text-sm text-[#7E7E7E] mx-auto text-center font-semibold">LOGIN</h4>
       <input 
         type="text"
         id="email"
@@ -62,7 +62,7 @@ export const Login = () => {
         value={password.password}
         className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
       />
-      <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
+      <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white font-semibold">Login</button>
     </form>
   </div>
   )
