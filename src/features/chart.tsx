@@ -144,11 +144,11 @@ ChartJS.register(
 
   return (
     <div className="">
-        <h2 className="bg-[#340260] text-[#C2C2C2] p-2 font-bold text-xl rounded-md">Welcome Onboard, Daniel</h2>
+        <h2 className="bg-[#340260] text-[#C2C2C2] p-2 font-bold text-lg rounded-md">Welcome Onboard, Daniel</h2>
 
           <div className="grid md:grid-cols-2 gap-3 mt-3">
             {/* Total Sales */}
-            <div className=" bg-white p-8 rounded-lg shadow-sm">
+            <div className=" bg-white rounded-lg shadow-sm md:p-6 p-1">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-semibold text-gray-800">Total sales today</h2>
                 <div className="flex items-center space-x-2">
@@ -174,7 +174,7 @@ ChartJS.register(
                   <p className="text-sm text-green-500 bg-green-50 px-2 py-1 rounded-full">+80%</p>
                 </div>
               </div>
-              <div className="w-full mt-4 bg-gray-100 rounded-lg py-6 px-6">
+              <div className="md:w-full mt-4 bg-gray-100 rounded-lg py-6 px-6">
                 <Line data={salesData} options={salesOptions} />
               </div>
 

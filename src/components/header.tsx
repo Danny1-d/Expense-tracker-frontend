@@ -1,7 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
-import {  Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+// import {  Link, useNavigate } from "react-router-dom";
+// import { toast } from "react-toastify";
 
 interface HeaderProps {
   title?: string;
@@ -12,42 +12,41 @@ interface HeaderProps {
 const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
   const isActive = (tab: string) => activeTab === tab;
   const [open, setOpen ] = useState<boolean>(false)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
 
-  const sendVerificationOtp = async () => {
-    try {
-      axios.defaults.withCredentials= true;
+  // const sendVerificationOtp = async () => {
+  //   try {
+  //     axios.defaults.withCredentials= true;
 
-      const {data} = await axios.post(import.meta.env.VITE_API_URL + "auth/verifyemail")
+  //     const {data} = await axios.post(import.meta.env.VITE_API_URL + "auth/verifyemail")
 
-      if (data.success) {
-        navigate('/emailverify')
-        toast.success(data.message)
-        console.log(data.message)
-      } else {
-        toast.error(data.messsage)
-        console.log(data.message)
-      }
+  //     if (data.success) {
+  //       navigate('/emailverify')
+  //       toast.success(data.message)
+  //       console.log(data.message)
+  //     } else {
+  //       toast.error(data.messsage)
+  //       console.log(data.message)
+  //     }
 
-    } catch (error) {
-      // toast.error(data.error);
-      console.log(error)
-    }
-  }
+  //   } catch (error) {
+  //     // toast.error(data.error);
+  //     console.log(error)
+  //   }
+  // }
   return (
     <header className="flex items-center justify-between bg-[#FDFDFD] p-4 w-full shadow-2xs backdrop-blur-3xl">
 
       {/* mobile nav bar */}
-      <div className="md:hidden block z-50">
-        <img 
-            src="/menubar.png"
-            className="h-10 w-10 cursor-pointer"
-            onClick={() => setOpen(!open)}
-        />
+          <img 
+              src="/menubar.png"
+              className="w-10 cursor-pointer"
+              onClick={() => setOpen(!open)}
+          />
 
         {open && (
-          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed left-0 top-0">
+          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed left-0 top-0 z-50 justify-center">
             <div
             onClick={() => {
               setActiveTab("dashboard");
@@ -96,7 +95,6 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
           </div>
           </nav>
         )}
-      </div>
 
     <div>
         <h1 className="font-poppins font-bold text-xl text-black-500 ml-5">
@@ -121,10 +119,10 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
             height={60}
             className="h-15 w-15 rounded-full p-2"
         /> */}
-
+{/* 
           <Link to='/verifyemail' onClick={sendVerificationOtp} className="border border-gray-300 px-3 py-2 rounded-full text-gray-500 text-sm">
             Verify Email
-          </Link>
+          </Link> */}
 
         <div className="flex items-center space-x-2">
             {/* <Image

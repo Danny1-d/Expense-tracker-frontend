@@ -62,7 +62,7 @@ export const Login = () => {
         value={password.password}
         className="border border-gray-300 py-1 rounded-lg outline-none md:px-5 px-2 placeholder:text-sm placeholder:text-gray-300"
       />
-      <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
+      <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-lg cursor-pointer text-white">Login</button>
     </form>
   </div>
   )

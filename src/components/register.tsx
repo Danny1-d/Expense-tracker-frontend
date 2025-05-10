@@ -92,7 +92,7 @@ const Register = () => {
         </Link>
         
 
-        <button className="bg-purple-500 px-10 md:px-10 py-2 rounded-xl cursor-pointer text-white">Sign Up</button>
+        <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-xl cursor-pointer text-white">Sign Up</button>
 
         <p className="text-sm text-gray-500 flex gap-2">Already have an account? <Link to="/signin" className="underline flex flex-1 justify-end text-purple-500 text-sm cursor-pointer">Login</Link></p>
       </form>
