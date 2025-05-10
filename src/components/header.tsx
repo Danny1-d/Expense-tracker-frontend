@@ -1,7 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
-import {  Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+// import {  Link, useNavigate } from "react-router-dom";
+// import { toast } from "react-toastify";
 
 interface HeaderProps {
   title?: string;
@@ -12,29 +12,29 @@ interface HeaderProps {
 const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
   const isActive = (tab: string) => activeTab === tab;
   const [open, setOpen ] = useState<boolean>(false)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
 
-  const sendVerificationOtp = async () => {
-    try {
-      axios.defaults.withCredentials= true;
+  // const sendVerificationOtp = async () => {
+  //   try {
+  //     axios.defaults.withCredentials= true;
 
-      const {data} = await axios.post(import.meta.env.VITE_API_URL + "auth/verifyemail")
+  //     const {data} = await axios.post(import.meta.env.VITE_API_URL + "auth/verifyemail")
 
-      if (data.success) {
-        navigate('/emailverify')
-        toast.success(data.message)
-        console.log(data.message)
-      } else {
-        toast.error(data.messsage)
-        console.log(data.message)
-      }
+  //     if (data.success) {
+  //       navigate('/emailverify')
+  //       toast.success(data.message)
+  //       console.log(data.message)
+  //     } else {
+  //       toast.error(data.messsage)
+  //       console.log(data.message)
+  //     }
 
-    } catch (error) {
-      // toast.error(data.error);
-      console.log(error)
-    }
-  }
+  //   } catch (error) {
+  //     // toast.error(data.error);
+  //     console.log(error)
+  //   }
+  // }
   return (
     <header className="flex items-center justify-between bg-[#FDFDFD] p-4 w-full shadow-2xs backdrop-blur-3xl">
 
