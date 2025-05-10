@@ -49,8 +49,8 @@ const Register = () => {
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-blue-200 to-purple-400">
       <form className="flex flex-col items-center gap-4 bg-white md:px-30 md:py-20 p-3 m-auto rounded-lg" onSubmit={handleSubmit}>
-        <h2 className="font-bold text-3xl">Danny</h2>
-        <h4 className="text-lg text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">REGISTER</h4>
+        <h2 className="font-bold md:text-3xl text-xl">Danny</h2>
+        <h4 className="md:text-lg text-sm text-[#7E7E7E] max-w-[270px] mx-auto text-center font-semibold">REGISTER</h4>
         <input 
           type="text"
           placeholder="First Name"
@@ -92,7 +92,7 @@ const Register = () => {
         </Link>
         
 
-        <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-xl cursor-pointer text-white">Sign Up</button>
+        <button className="bg-[#340260] px-10 md:px-10 py-2 rounded-xl cursor-pointer text-white font-semibold">Sign Up</button>
 
         <p className="text-sm text-gray-500 flex gap-2">Already have an account? <Link to="/signin" className="underline flex flex-1 justify-end text-purple-500 text-sm cursor-pointer">Login</Link></p>
       </form>
