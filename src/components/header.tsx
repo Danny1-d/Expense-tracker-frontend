@@ -37,16 +37,15 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
   // }
   return (
     <header className="flex items-center justify-between bg-[#FDFDFD] p-4 w-full shadow-2xs backdrop-blur-3xl">
-
       {/* mobile nav bar */}
           <img 
               src="/menubar.png"
-              className="w-10 cursor-pointer"
+              className="h-3 w-5 cursor-pointer m-auto md:hidden block"
               onClick={() => setOpen(!open)}
           />
 
         {open && (
-          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed left-0 top-0 z-50 justify-center">
+          <nav className="flex flex-col w-[20rem] h-screen p-2 bg-[#340260] fixed left-0 top-0 bottom-0 z-50 justify-center">
             <div
             onClick={() => {
               setActiveTab("dashboard");
@@ -58,7 +57,7 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
               : "text-[#C2C2C2] hover:bg-gray-100 hover:text-gray-900"
             }`}
             >
-            <span className="text-sm">Dashboard</span>
+            <span className="text-sm font-semibold">Dashboard</span>
             </div>
 
           <div
@@ -97,18 +96,18 @@ const Header = ({ title, activeTab, setActiveTab }: HeaderProps) => {
         )}
 
     <div>
-        <h1 className="font-poppins font-bold text-xl text-black-500 ml-5">
+        <h1 className="font-poppins md:font-bold font-semibold  md:text-xl text-sm text-black-500 mx-2">
             {title}
         </h1>
     </div>
 
     {/* Right side */}
-    <div className="flex items-center space-x-4">
-        <div className="relative w-[350px]">
+    <div className="flex items-center space-x-4 justify-between">
+        <div className="relative md:w-[350px]">
             {/* <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" /> */}
             <input
                 type="text"
-                placeholder="Search for anything here"
+                placeholder="Search"
                 className="w-full pl-10 p-1 rounded-3xl border border-gray-300 focus:outline-none text-base"
             />
         </div>

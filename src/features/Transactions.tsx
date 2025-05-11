@@ -13,29 +13,29 @@ const Transactions = () => {
   ];
 
   return (
-    <div>
-      <h2 className="bg-[#340260] text-[#C2C2C2] p-2 font-bold text-xl rounded-md text-center">Expenses Made in the Past Months</h2>
+    <div className="h-screen">
+      <h2 className="bg-[#340260] text-[#C2C2C2] p-2 text-sm md:text-xl rounded-md text-center">Expenses Made in the Past Months</h2>
         <div className="bg-white p-8 rounded-lg shadow-sm mb-15">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-gray-800">Total Amount spent this Month</h3>
-            <h3 className="text-sm font-semibold text-gray-800">600000</h3>
+            <h3 className="md:text-lg text-sm text-gray-800">Total Amount spent this Month</h3>
+            <h3 className="md:text-lg text-sm font-semibold text-gray-800">600000</h3>
           </div>
         </div>
 
       <table className="w-full">
         <thead className="bg-[#340260] text-[#C2C2C2]">
           <tr>
-            <th className="p-4">Date</th>
-            <th className="p-4">Amount</th>
-            <th className="p-4">Description</th>
+            <th className="p-4 text-sm">Date</th>
+            <th className="p-4 text-sm">Amount</th>
+            <th className="p-4 text-sm">Description</th>
           </tr>
         </thead>
         <tbody className="bg-white">
       {Transactions.map((list) => (
             <tr key={list.id}>
-              <td className="p-4 text-center">{list.date}</td>
-              <td className="p-4 text-center">{list.amount}</td>
-              <td className="p-4 text-center">{list.description}</td>
+              <td className="p-4 text-center text-sm">{list.date}</td>
+              <td className="p-4 text-center text-sm">{list.amount}</td>
+              <td className="p-4 text-center text-sm">{list.description}</td>
             </tr>
       ))}
         </tbody>
